@@ -6,7 +6,7 @@
 /*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 19:14:54 by gde-pass          #+#    #+#             */
-/*   Updated: 2018/05/10 15:48:25 by gde-pass         ###   ########.fr       */
+/*   Updated: 2018/05/10 18:05:09 by gde-pass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,26 +40,55 @@ html, body
     box-shadow: 6px 6px 6px black;
     background-color: rgb(144, 144, 144);
     border-radius: 6px;
+
 }
 
 .left-box
 {
     margin-top: 20px;
-    width: 200px;
+    width: 170px;
     height: 550px;
     box-shadow: 6px 6px 6px black;
     background-color: rgb(144, 144, 144);
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .right-box
 {
     margin-top: 20px;
-    width: 200px;
+    width: 170px;
     height: 550px;
     box-shadow: 6px 6px 6px black;
     background-color: rgb(144, 144, 144);
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.icons
+{
+    width: 100px;
+}
+
+.icons2
+{
+    width: 100px;
+    margin-top: 10px;
+}
+
+#wall
+{
+    background-image:
+    linear-gradient(to right, rgba(0,0,0,0.0), rgba(255,255,255,0.5)),url("resources/brick.jpg");
+    width: 150px;
+    height: 80px;
 }
 
 #grosse-boite
