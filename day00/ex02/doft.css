@@ -6,7 +6,7 @@
 /*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 19:14:54 by gde-pass          #+#    #+#             */
-/*   Updated: 2018/05/07 19:05:14 by gde-pass         ###   ########.fr       */
+/*   Updated: 2018/05/10 14:23:58 by gde-pass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ html, body
 .header-box
 {
     margin: auto;
-    width: 70%;
+    width: 1700px;
+    height: 130px;
     box-shadow: 6px 6px 6px black;
     background-color: rgb(144, 144, 144);
     border-radius: 6px
@@ -31,13 +32,33 @@ html, body
 #title-header
 {
     position: relative;
-    right: 0%;
-    width: 35%;
+    width: 500px;
+    height: 130px;
     margin: auto;
     border-radius: 6px;
 }
 
 #loupe
 {
+    position: relative;
+    width: 220px;
+    height: 130px;
+    left: 950px;
+    top: 17px;
+}
 
+#refresh_button
+{
+    position: relative;
+    width: 18px;
+    left: 950px;
+    bottom: 100px;
+}
+
+#close
+{
+    position: relative;
+    left: 928px;
+    bottom: 5px;
+    width: 18px;
 }
