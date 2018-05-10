@@ -6,7 +6,7 @@
 /*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 19:14:54 by gde-pass          #+#    #+#             */
-/*   Updated: 2018/05/10 14:23:58 by gde-pass         ###   ########.fr       */
+/*   Updated: 2018/05/10 15:48:25 by gde-pass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,58 @@ html, body
   width:100%;
   height:100%;
   margin: auto;
-  margin-top: 5px;
   background-color: rgb(80, 80, 80);
 }
 
 .header-box
 {
-    margin: auto;
-    width: 1700px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    width: 1800px;
     height: 130px;
     box-shadow: 6px 6px 6px black;
     background-color: rgb(144, 144, 144);
     border-radius: 6px
+}
+
+.middle-box
+{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 1300px;
+    height: 800px;
+    box-shadow: 6px 6px 6px black;
+    background-color: rgb(144, 144, 144);
+    border-radius: 6px;
+}
+
+.left-box
+{
+    margin-top: 20px;
+    width: 200px;
+    height: 550px;
+    box-shadow: 6px 6px 6px black;
+    background-color: rgb(144, 144, 144);
+    border-radius: 6px;
+}
+
+.right-box
+{
+    margin-top: 20px;
+    width: 200px;
+    height: 550px;
+    box-shadow: 6px 6px 6px black;
+    background-color: rgb(144, 144, 144);
+    border-radius: 6px;
+}
+
+#grosse-boite
+{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 #title-header
@@ -43,7 +83,7 @@ html, body
     position: relative;
     width: 220px;
     height: 130px;
-    left: 950px;
+    left: 1050px;
     top: 17px;
 }
 
@@ -51,14 +91,23 @@ html, body
 {
     position: relative;
     width: 18px;
-    left: 950px;
+    left: 1050px;
     bottom: 100px;
 }
 
 #close
 {
     position: relative;
-    left: 928px;
+    left: 1028px;
     bottom: 5px;
     width: 18px;
+}
+
+#cluster
+{
+    position: relative;
+    width: 1280px;
+    height: 780px;
+    top: 10px;
+    left: 10px;
 }
