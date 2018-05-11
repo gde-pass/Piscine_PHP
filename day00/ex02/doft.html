@@ -5,7 +5,7 @@
      By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2018/04/13 19:12:14 by gde-pass          #+#    #+#
-     Updated: 2018/05/10 18:05:16 by gde-pass         ###   ########.fr
+     Updated: 2018/05/11 15:42:18 by gde-pass         ###   ########.fr
 -->
 
 <!DOCTYPE html>
@@ -15,34 +15,50 @@
         <title>Day of the 42</title>
         <link rel="stylesheet" href="doft.css" media="all" />
     <head>
-<body>
-    <div class="header-box">
-        <img id="title-header" src="resources/day_of_the_42.png" alt="header" />
-        <img id="loupe" src="resources/loupe.png" alt="loupe" />
-        <img id="refresh_button" src="resources/reload.png" alt="reload" />
-        <img id="close" src="resources/close.gif" alt="close" />
-    </div>
+    <body>
+        <div id="grosse-boite">
 
-    <div id="grosse-boite">
+            <div id="header-box">
+                <img id="title-header" src="resources/day_of_the_42.png" alt="header" />
+                <img id="loupe" src="resources/loupe.png" alt="loupe" />
+                <img id="refresh_button" src="resources/reload.png" alt="reload" />
+                <img id="close" src="resources/close.gif" alt="close" />
+            </div>
 
-        <div class="left-box">
-            <img class="icons" src="resources/arrow.png" alt="arrow" />
-            <img class="icons" src="resources/main.png" alt="main" />
-            <img class="icons" src="resources/oeil.png" alt="oeil" />
-            <img class="icons" src="resources/outil.png" alt="outil" />
-            <img class="icons" src="resources/chat-icon.png" alt="chat-icon" />
+            <div id="moyenne-boite">
+
+                <div id="left-box">
+                    <img class="icons" src="resources/arrow.png" alt="Avancer" />
+                    <img class="icons" src="resources/main.png" alt="Prendre" />
+                    <img class="icons" id="oeil" src="resources/oeil.png" alt="Regarder" />
+                    <img class="icons" src="resources/outil.png" alt="Utiliser" />
+                    <img class="icons" src="resources/chat-icon.png" alt="Parler" />
+                </div>
+
+                <div id="middle-box">
+                    <img id="cluster" src="resources/cluster.jpg" alt="cluster" />
+
+                    <div id="green-area">
+                        <p>
+                            Vous <b>entrez</b> alors dans une grande piece remplie <br />
+                            d'ordinateurs... <br />
+                            <i>- Bonjour, vous êtes nouveau ici ?</i>
+                        </p>
+                        <form>
+                            <input type="text" name="answer" size="50" />
+                            <input type="button" name="reply" value="Repondre"/>
+                        </form>
+                    </div>
+                    
+                </div>
+
+                <div id="right-box">
+                    <img class="icons" src="resources/book.png" alt="book"  />
+                    <img class="icons" src="resources/towel.png" alt="towel"  />
+                    <div id="wall"> </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="middle-box">
-            <img id="cluster" src="resources/cluster.jpg" alt="cluster" />
-        </div>
-
-        <div class="right-box">
-            <img class="icons2" src="resources/book.png" alt="book"  />
-            <img class="icons2" src="resources/towel.png" alt="towel"  />
-            <div id="wall"> </div>
-        </div>
-
-    </div>
-</body>
+    </body>
 </html>
