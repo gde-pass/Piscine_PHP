@@ -6,7 +6,7 @@
 /*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 19:14:54 by gde-pass          #+#    #+#             */
-/*   Updated: 2018/05/11 15:48:42 by gde-pass         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:07:34 by gde-pass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ form
 {
     position: relative;
     left: 12px;
+}
+
+em
+{
+    font-style: normal;
+    text-shadow: 5px 5px 4px red;
 }
 
 p
@@ -37,7 +43,25 @@ b
 
 .icons
 {
-    width: 100px;
+    width: 80px;
+}
+
+#clickscreen
+{
+    position: absolute;
+    top: 450px;
+    left: 1021px;
+    width: 237px;
+    height: 179px;
+}
+
+#clickchair
+{
+    position: absolute;
+    top:507px;
+    left: 433px;
+    width: 126px;
+    height: 212px;
 }
 
 #grosse-boite
@@ -69,7 +93,7 @@ b
 {
     width: 170px;
     height: 550px;
-    margin-right: 20px;
+    margin-right: 30px;
 
     display: flex;
     flex-direction: column;
@@ -96,7 +120,7 @@ b
 {
     width: 170px;
     height: 550px;
-    margin-left: 20px;
+    margin-left: 30px;
 
     display: flex;
     flex-direction: column;
@@ -117,7 +141,7 @@ b
     top: 710px;
     left: -270px;
 
-    background-color: rgb(106, 196, 117);
+    background-color: rgb(133, 223, 136);
     box-shadow: 6px 6px 6px black;
     border-radius: 6px;
 }
@@ -139,7 +163,10 @@ b
     linear-gradient(to right, rgba(0,0,0,0.0), rgba(255,255,255,0.5)),url("resources/brick.jpg");
 }
 
-
+#book
+{
+    margin-top: 15px;
+}
 
 #title-header
 {
