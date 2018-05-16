@@ -1,0 +1,471 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   responsive.css                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/16 19:02:32 by gde-pass          #+#    #+#             */
+/*   Updated: 2018/05/16 19:09:20 by gde-pass         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#wrapper {
+   padding-top: 10px;
+   width: 1900px;
+   margin: 0 auto;
+   position: relative;
+}
+h1 {
+    font-family: Courier New, Courier, monospace;
+    font-weight: 200;
+    font-size: 30px;
+    color: #ACACB6;
+}
+img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+#all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#desin{
+    border: 2px dashed white;
+}
+#synt {
+    border: 2px dotted white;
+}
+#pri {
+    border: 2px solid white;
+}
+#first-gap {
+    width: 1690px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+#second-gap {
+    width: 1050px;
+}
+#third-gap {
+    width: 100px;
+}
+#fourth-gap {
+    width: 310px;
+}
+.bloc {
+    margin: 10px;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    font-family: Courier New, Courier, monospace;
+    border-radius: 5px;
+}
+.nm {
+    background-color: #A4FDA5;
+}
+.gn {
+    background-color: #6fd0f7;
+}
+.ma {
+    background-color: #FC676A;
+}
+.at {
+    background-color: #FEDEB1;
+}
+.me {
+    background-color: #CDCC9D;
+}
+.ha {
+    background-color: #788cd3;
+}
+.mp {
+    background-color: #CDCDCD;
+}
+.mt {
+    background-color: #FEC2C2;
+}
+.la {
+    background-color: #FEC2FE;
+}
+.ac {
+    background-color: #FD9CCD;
+}
+.num {
+    color: white;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+.elem {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: auto;
+}
+.masse {
+    text-align: right;
+    color: white;
+    padding-right: 4px;
+    padding-top: 3px;
+}
+#legende1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px;
+}
+#legende2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+}
+.blocleg1 {
+    width: 250px;
+    font-family: Courier New, Courier, monospace;
+    font-size: 20px;
+    color: #ACACB6;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.blocleg2 {
+    font-family: Courier New, Courier, monospace;
+    font-size: 12px;
+    width: 7%;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.texteleg {
+    padding-top: 12px;
+}
+#desinleg {
+    border: 2px dashed #ACACB6;
+    padding: auto;
+}
+#syntleg {
+    border: 2px dotted #ACACB6;
+    padding-top: 17px;
+}
+#prileg {
+    border: 2px solid #ACACB6;
+    padding-top: 17px;
+}
+
+@media screen and (max-width: 1915px) {
+    #wrapper {
+        padding-top: 10px;
+        width: 720px;
+        margin: 0 auto;
+        position: relative;
+     }
+     #title {
+         display: flex;
+         justify-content: center;
+         padding-bottom: 10px;
+     }
+     h1 {
+         font-family: Courier New, Courier, monospace;
+         font-weight: 200;
+         font-size: 20px;
+         color: #ACACB6;
+     }
+     img {
+         width: 60px;
+         height: 60px;
+         margin-left: 20px;
+         border-radius: 10px;
+     }
+     #all {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+     }
+     #desin{
+         border: 1px dashed white;
+     }
+     #synt {
+         border: 1px dotted white;
+     }
+     #pri {
+         border: 1px solid white;
+     }
+     #first-gap {
+         width: 640px;
+     }
+     #second-gap {
+         width: 395px;
+     }
+     #third-gap {
+         width: 40px;
+     }
+     #fourth-gap {
+         width: 120px;
+     }
+     .bloc {
+         margin: 5px 0;
+         width: 36px;
+         height: 40px;
+         display: flex;
+         flex-direction: column;
+         font-family: Courier New, Courier, monospace;
+         border-radius: 5px;
+     }
+     .nm {
+         background-color: #A4FDA5;
+     }
+     .gn {
+         background-color: #6fd0f7;
+     }
+     .ma {
+         background-color: #FC676A;
+     }
+     .at {
+         background-color: #FEDEB1;
+     }
+     .me {
+         background-color: #CDCC9D;
+     }
+     .ha {
+         background-color: #788cd3;
+     }
+     .mp {
+         background-color: #CDCDCD;
+     }
+     .mt {
+         background-color: #FEC2C2;
+     }
+     .la {
+         background-color: #FEC2FE;
+     }
+     .ac {
+         background-color: #FD9CCD;
+     }
+     .num {
+         color: white;
+         font-size: 9px;
+         padding-left: 5px;
+         padding-bottom: 3px;
+     }
+     .elem {
+         text-align: center;
+         font-size: 15px;
+         color: white;
+         margin: auto;
+     }
+     .masse {
+         text-align: right;
+         color: white;
+         padding-right: 4px;
+         padding-top: 3px;
+         font-size: 7px;
+     }
+     #legende1 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         text-align: center;
+         margin: 20px;
+     }
+     #legende2 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         text-align: center;
+         margin-top: 20px;
+     }
+     .blocleg1 {
+         width: 150px;
+         font-family: Courier New, Courier, monospace;
+         font-size: 12px;
+         color: #ACACB6;
+         padding-bottom: 10px;
+     }
+     .blocleg2 {
+         font-family: Courier New, Courier, monospace;
+         font-size: 8px;
+         width: 7%;
+         color: white;
+         padding-top: 5px;
+         padding-bottom: 5px;
+     }
+     .texteleg {
+         padding-top: 12px;
+     }
+     #desinleg {
+         border: 1px dashed #ACACB6;
+         padding: auto;
+     }
+     #syntleg {
+         border: 1px dotted #ACACB6;
+         padding-top: 17px;
+     }
+     #prileg {
+         border: 1px solid #ACACB6;
+         padding-top: 17px;
+     }
+}
+
+@media screen and (max-width: 745px) {
+    #wrapper {
+        padding-top: 10px;
+        width: 375px;
+        margin: 0 auto;
+        position: relative;
+     }
+     #title {
+         display: flex;
+         justify-content: center;
+         padding-bottom: 10px;
+     }
+     h1 {
+         font-family: Courier New, Courier, monospace;
+         font-weight: 200;
+         font-size: 14px;
+         margin: auto 0;
+         color: #ACACB6;
+     }
+     img {
+         width: 60px;
+         height: 60px;
+         margin-left: 20px;
+         border-radius: 10px;
+     }
+     #all {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+     }
+     #desin{
+         border: 1px dashed white;
+     }
+     #synt {
+         border: 1px dotted white;
+     }
+     #pri {
+         border: 1px solid white;
+     }
+     #first-gap {
+         width: 330px;
+     }
+     #second-gap {
+         width: 207px;
+     }
+     #third-gap {
+         width: 20px;
+     }
+     #fourth-gap {
+         width: 62px;
+     }
+     .bloc {
+         margin: 5px 0;
+         width: 18px;
+         height: 40px;
+         display: flex;
+         flex-direction: column;
+         font-family: Courier New, Courier, monospace;
+         border-radius: 5px;
+     }
+     .nm {
+         background-color: #A4FDA5;
+     }
+     .gn {
+         background-color: #6fd0f7;
+     }
+     .ma {
+         background-color: #FC676A;
+     }
+     .at {
+         background-color: #FEDEB1;
+     }
+     .me {
+         background-color: #CDCC9D;
+     }
+     .ha {
+         background-color: #788cd3;
+     }
+     .mp {
+         background-color: #CDCDCD;
+     }
+     .mt {
+         background-color: #FEC2C2;
+     }
+     .la {
+         background-color: #FEC2FE;
+     }
+     .ac {
+         background-color: #FD9CCD;
+     }
+     .num {
+         color: white;
+         font-size: 9px;
+         padding-left: 2px;
+         padding-bottom: 3px;
+     }
+     .elem {
+         text-align: center;
+         font-size: 11px;
+         color: white;
+         margin: auto;
+     }
+     .masse {
+         text-align: right;
+         color: white;
+         padding-right: 2px;
+         padding-top: 3px;
+         font-size: 7px;
+     }
+     #legende1 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         text-align: center;
+         margin: 20px;
+     }
+     #legende2 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         text-align: center;
+         margin-top: 20px;
+     }
+     .blocleg1 {
+         width: 100px;
+         font-family: Courier New, Courier, monospace;
+         font-size: 9px;
+         color: #ACACB6;
+         padding-bottom: 12px;
+         padding-top: 10px;
+     }
+     .blocleg2 {
+         font-family: Courier New, Courier, monospace;
+         font-size: 8px;
+         width: 60px;
+         color: white;
+         padding-bottom: 7px;
+         margin: 5px;
+     }
+     .texteleg {
+         padding-top: 12px;
+     }
+     #desinleg {
+         border: 1px dashed #ACACB6;
+         padding: auto;
+     }
+     #syntleg {
+         border: 1px dotted #ACACB6;
+         padding-top: 17px;
+     }
+     #prileg {
+         border: 1px solid #ACACB6;
+         padding-top: 17px;
+     }
+}
