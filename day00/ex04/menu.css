@@ -6,7 +6,7 @@
 /*   By: gde-pass <gde-pass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 23:10:47 by gde-pass          #+#    #+#             */
-/*   Updated: 2018/05/15 00:18:36 by gde-pass         ###   ########.fr       */
+/*   Updated: 2018/05/15 01:03:27 by gde-pass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ body
     font-size: 22px;
     margin: 0px;
     padding: 0px;
+    background-color: rgb(218, 224, 222);
 }
 
 nav
@@ -70,6 +71,16 @@ nav li:hover .submenu
     z-index: 42;
 }
 
+.submenu li a:link
+{
+    color: black;
+}
+
+.submenu li a:visited
+{
+    color: black;
+}
+
 .submenu
 {
     display: none;
@@ -108,8 +119,8 @@ nav li:hover .submenu
 
 .menu-deserts:hover
 {
-    border-top: 5px solid #BBB;
-    background-color: RGBa(220, 220, 220, 0.15);
+    border-top: 5px solid #d631cb;
+    background-color: RGBa(214, 49, 43, 0.15);
 }
 
 nav > ul > li:hover > a
@@ -122,4 +133,24 @@ nav > ul > li:hover > a
     color: #EEE;
     font-weight: bold;
     background-color: #424558;
+}
+
+.menu-menus .submenu li:hover a
+{
+    border-left: 5px solid #e44d26;
+}
+
+.menu-sandwichs .submenu li:hover a
+{
+    border-left: 5px solid #0070bb;
+}
+
+.menu-boissons .submenu li:hover a
+{
+    border-left: 5px solid #f1dc4f;
+}
+
+.menu-deserts .submenu li:hover a
+{
+    border-left: 5px solid #d631cb;
 }
