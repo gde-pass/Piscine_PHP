@@ -1,5 +1,9 @@
 #!/usr/bin/php
 <?php
+
+// Récupere tous les arguments et les places dans un tableaux en suppriment les
+// espaces en trop au milleu et sur les cotés.
+
 $i = 1;
 while($i < $argc)
 {
@@ -8,6 +12,8 @@ while($i < $argc)
 	$i++;
 }
 $array = preg_split("/ +/", trim($string));
+
+// Sépare en plusieurs tableaux selon si c'est un chiffre ou des caracteres alpha
 
 foreach ($array as $value)
 {
@@ -23,9 +29,13 @@ foreach ($array as $value)
 	}
 }
 
+// Trie des 3 tableaux
+
 natcasesort($alpha_array);
 sort($digit_array, SORT_STRING);
 sort($array, SORT_STRING);
+
+// Partie Affichage
 
 foreach ($alpha_array as $value)
 	echo "$value", PHP_EOL;
