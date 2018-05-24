@@ -1,6 +1,6 @@
 <?php
 foreach ($_GET as $key => $value)
 {
-    echo "$key: $value\n", PHP_EOL;
+    echo "$key: $value\n";
 }
  ?>
