@@ -1,0 +1,144 @@
+body
+{
+    font-family: Optima, serif;
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(218, 224, 222);
+}
+
+nav
+{
+    width: 100%;
+    background-color: #424558;
+}
+
+nav > ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+nav > ul > li
+{
+    position: relative;
+    float: left;
+}
+
+nav li
+{
+    list-style-type: none;
+}
+
+nav > ul::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav a
+{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav > ul > li > a
+{
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+nav li:hover .submenu
+{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 42;
+}
+
+.submenu li a:link
+{
+    color: black;
+}
+
+.submenu li a:visited
+{
+    color: black;
+}
+
+.submenu
+{
+    display: none;
+}
+
+.submenu li
+{
+    border-bottom: 1px solid #CCC
+}
+
+.submenu li a
+{
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #22538;
+    width: 270px;
+}
+
+.menu-accueil:hover
+{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-shop:hover
+{
+    border-top: 5px solid #0070bb;
+    background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-log_unlog:hover
+{
+    border-top: 5px solid #f1dc4f;
+    background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-inscription:hover
+{
+    border-top: 5px solid #d631cb;
+    background-color: RGBa(214, 49, 43, 0.15);
+}
+
+nav > ul > li:hover > a
+{
+    padding: 15px 30px 20px 30px;
+}
+
+.submenu li:hover a
+{
+    color: #EEE;
+    font-weight: bold;
+    background-color: #424558;
+}
+
+.menu-accueil .submenu li:hover a
+{
+    border-left: 5px solid #e44d26;
+}
+
+.menu-shop .submenu li:hover a
+{
+    border-left: 5px solid #0070bb;
+}
+
+.menu-log_unlog .submenu li:hover a
+{
+    border-left: 5px solid #f1dc4f;
+}
+
+.menu-inscription .submenu li:hover a
+{
+    border-left: 5px solid #d631cb;
+}
