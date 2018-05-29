@@ -23,19 +23,19 @@ else
     switch ($array[1])
     {
         case '+':
-            echo $array[0] + $array[2];
+            echo $array[0] + $array[2], PHP_EOL;
             break;
         case '-':
-            echo $array[0] - $array[2];
+            echo $array[0] - $array[2], PHP_EOL;
             break;
         case '*':
-            echo $array[0] * $array[2];
+            echo $array[0] * $array[2], PHP_EOL;
             break;
         case '/':
-            echo $array[0] / $array[2];
+            echo $array[0] / $array[2], PHP_EOL;
             break;
         case '%':
-            echo $array[0] % $array[2];
+            echo $array[0] % $array[2], PHP_EOL;
             break;
     }
 }
