@@ -5,11 +5,10 @@ function already_registered()
     $unserialized_array = unserialize($array);
     foreach ($unserialized_array as $element)
     {
-        if ($element['login'] == $_POST['login'])
+        if ($element['login'] === $_POST['login'])
             return TRUE;
-        else
-            return FALSE;
     }
+    return FALSE;
 }
 
 function add_user($hashed_pw)
@@ -24,8 +23,8 @@ function add_user($hashed_pw)
 
 if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd'] != NULL)
 {
-    $hashed_pw = hash('whirlpool', '$_POST[\'passwd\']');
-    if (!file_exists('../htdocs/private'))
+    $hashed_pw = hash('whirlpool', $_POST['passwd']);
+    if (!(file_exists('../htdocs/private')))
     {
         mkdir('../htdocs/private/', 0777, true);
         $array = array(array('login' => $_POST['login'], 'passwd' => $hashed_pw));
