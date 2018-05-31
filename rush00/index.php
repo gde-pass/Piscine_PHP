@@ -53,5 +53,7 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
 
         </ul>
     </nav>
+
+    <?php echo $_SESSION['login'];?>
 </body>
 </html>
