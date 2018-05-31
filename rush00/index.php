@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'install.php';
-$_SESSION['connexion_status'] = 'disconnected';
 if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
     create_admin_account();
 ?>
@@ -16,8 +15,9 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
 
 <body>
     <nav>
-        <ul>
 
+        <ul>
+<img id="header_logo" src="ressources/img/logo.png" alt="logo" />
             <li class="menu-accueil">
                 <a href="index.php">Home</a>
             </li>
@@ -34,7 +34,8 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
                 </ul>
             </li>
 
-            <li class="menu-log_unlog">
+
+            <li class="menu-log_unlog" style="float:right;">
                 <?php
                     if ($_SESSION['connexion_status'] == 'disconnected')
                         echo '<a href="connexion.php">Log In</a>';
@@ -43,7 +44,7 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
                  ?>
             </li>
 
-            <li class="menu-inscription">
+            <li class="menu-inscription" style="float:right;">
                 <?php
                     if ($_SESSION['connexion_status'] == 'disconnected')
                         echo '<a href="inscription.php"> Sign In</a>';

@@ -7,6 +7,8 @@ body
     background-color: rgb(218, 224, 222);
 }
 
+
+/* CSS HEADER */
 nav
 {
     width: 100%;
@@ -99,11 +101,13 @@ nav li:hover .submenu
     background-color: RGBa(000, 112, 192, 0.15);
 }
 
+
 .menu-log_unlog:hover
 {
     border-top: 5px solid #f1dc4f;
     background-color: RGBa(241, 211, 79, 0.15);
 }
+
 
 .menu-inscription:hover
 {
@@ -142,3 +146,9 @@ nav > ul > li:hover > a
 {
     border-left: 5px solid #d631cb;
 }
+
+img#header_logo
+{
+    width: 163.67px;
+}
+/* FIN CSS HEADER */
