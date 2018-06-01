@@ -163,3 +163,31 @@ img#header_logo
     width: 163.67px;
 }
 /* FIN CSS HEADER */
+
+.wrapper
+{
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+    border-top-style: solid;
+    border-width: 4px;
+    border-color: orange;
+}
+
+.itembox
+{
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}

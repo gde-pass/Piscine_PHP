@@ -59,18 +59,26 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
             <li class="menu-inscription" style="float:right;">
                 <?php
                     if ($_SESSION['connexion_status'] == 'disconnected')
-                        echo '<a href="inscription.php"> Sign In</a>';
+                        echo '<a href="inscription.php">Sign In</a>';
                 ?>
             </li>
         </ul>
     </nav>
-    <p>
         <?PHP
         echo 'Bonjour ' . $_SESSION['login'];
         ?>
         <br />
-        Change your password <br />
-        Change your email <br />
-    </p>
+
+        <form method="post" action="modif_password.php">
+            <p> Change your password </p>
+            Old password : <input type="password" name="oldpw" autofocus required />
+            <br />
+            New Password : <input type="password" name="newpw" required />
+            <input type="submit" name="submit" value="OK" />
+        </form>
+        <?php
+            if ($_SESSION['login'] == 'admin')
+                echo '<a href="admin_only.php">Manage website</a>';
+        ?>
 </body>
 </html>

@@ -47,7 +47,7 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
                 if ($_SESSION['connexion_status'] == 'connected')
                 {
                     echo '<li class="menu-user_profile" style="float:right;">
-                    <a href="#">My Profile</a>
+                    <a href="my_profile.php">My Profile</a>
                     <ul class="submenu">
                         <li> <a href="#">My shopping car</a></li>
                         <li> <a href="my_profile.php">My account</a></li>
@@ -66,6 +66,12 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
         </ul>
     </nav>
 
-    <?php echo $_SESSION['login'];?>
+
+    <div class="wrapper">
+        
+        <div class="itembox">
+
+        </div>
+    </div>
 </body>
 </html>
