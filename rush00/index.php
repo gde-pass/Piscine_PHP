@@ -34,7 +34,6 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
                 </ul>
             </li>
 
-
             <li class="menu-log_unlog" style="float:right;">
                 <?php
                     if ($_SESSION['connexion_status'] == 'disconnected')
@@ -43,6 +42,19 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
                         echo '<a href="disconnexion.php">Log Out</a>';
                  ?>
             </li>
+
+            <?php
+                if ($_SESSION['connexion_status'] == 'connected')
+                {
+                    echo '<li class="menu-user_profile" style="float:right;">
+                    <a href="#">My Profile</a>
+                    <ul class="submenu">
+                        <li> <a href="#">My shopping car</a></li>
+                        <li> <a href="my_profile.php">My account</a></li>
+                        <li> <a href="#">History of purchase</a></li>
+                    </ul></li>';
+                }
+            ?>
 
             <li class="menu-inscription" style="float:right;">
                 <?php
