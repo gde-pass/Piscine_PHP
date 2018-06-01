@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,6 +62,8 @@
 						echo '<a href="inscription.php"> Sign In</a>';
 				?>
 			</li>
+        </ul>
+    </nav>
 
 		</ul>
 	</nav>

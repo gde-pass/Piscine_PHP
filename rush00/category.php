@@ -5,12 +5,9 @@ if (!(file_exists('private/users'))) // Creation du fichier users et create admi
 	create_admin_account();
 include "header.php";
 ?>
-		<div class=content>
-			<div class=featctnt>
-				##featured content##
-			</div>
+		<div class=catcontent>
 			<div class=latestarticles>
-				<h2>Latest Articles</h2>
+				<h2>$category_name</h2>
 			</div>
 		<div class=articles>
 			<div class=article>
