@@ -1,7 +1,8 @@
 <?php
 include "header.php";
 ?>
-    <div class=contentform>
+
+<div class=contentform>
     <form class="formbg" action="auth_user.php" method="post">
     <p>
         <h1>Log-In</h1>
@@ -12,7 +13,7 @@ include "header.php";
         <input class=buttoninput type="submit" name="submit" value="OK" />
     </p>
     </form>
-    </div>
+</div>
 
 <?php
 include "footer.php";

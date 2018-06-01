@@ -1,15 +1,7 @@
 <?php
-session_start();
-include 'install.php';
 include 'header.php';
-if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
-	create_admin_account();
-if (!(file_exists('private/articles'))) // Creation du fichier articles et create 1er article
-	create_articles();
-
 $articles = file_get_contents('private/articles');
 $articles = unserialize($articles);
-
 ?>
 <div class=content>
 	<div class=featctnt>

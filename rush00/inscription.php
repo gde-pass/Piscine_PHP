@@ -1,8 +1,4 @@
 <?php
-session_start();
-include 'install.php';
-if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
-	create_admin_account();
 include "header.php";
 ?>
 	<div class=contentform>

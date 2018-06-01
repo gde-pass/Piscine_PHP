@@ -1,9 +1,4 @@
 <?php
-session_start();
-include 'install.php';
-if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
-    create_admin_account();
-
 function already_registered()
 {
     $array = file_get_contents('private/users');
@@ -20,7 +15,7 @@ function add_user($hashed_pw)
 {
     $array = file_get_contents('private/users');
     $unserialized_array = unserialize($array);
-    $unserialized_array[] = array('login' => $_POST['login'], 'passwd' => $hashed_pw);
+    $unserialized_array[] = array('login' => $_POST['login'], 'passwd' => $hashed_pw, 'admin' => 'no');
     $serialized_array = serialize($unserialized_array);
     file_put_contents('private/users', $serialized_array);
     echo '<html><head>
@@ -29,7 +24,7 @@ function add_user($hashed_pw)
         </head><body>
             <p>Your account is now created, you can log in with <a href="connexion.php">Here</a></p>
         </body></html>';
-    
+
 }
 
 if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] != NULL && $_POST['passwd2'] != NULL)
@@ -51,10 +46,9 @@ if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] !=
         if (!(file_exists('/private')))
         {
             mkdir('private/', 0777, true);
-            $array = array(array('login' => $_POST['login'], 'passwd' => $hashed_pw));
+            $array = array(array('login' => $_POST['login'], 'passwd' => $hashed_pw, 'admin' => 'no'));
             $serialized_array = serialize($array);
             file_put_contents('private/users', $serialized_array);
-            echo "file initialized", PHP_EOL;
         }
         else
         {

@@ -12,7 +12,10 @@ function auth($login, $passwd)
     foreach ($array as $account)
     {
         if ($login === $account['login'] AND $passwd === $account['passwd'])
+        {
+            $_SESSION['admin'] = $account['admin'];
             return TRUE;
+        }
     }
     return FALSE;
 }

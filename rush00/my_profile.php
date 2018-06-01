@@ -1,8 +1,5 @@
 <?php
 session_start();
-include 'install.php';
-if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
-    create_admin_account();
 include "header.php";
 ?>
         <div class=contentform>
@@ -16,8 +13,11 @@ include "header.php";
             <input class=buttoninput type="submit" name="submit" value="OK" />
         </form>
         <?php
-            if ($_SESSION['login'] == 'admin')
+            if ($_SESSION['admin'] == 'yes')
+            {
+                echo '<a href="install.php">Initialise website</a>';
                 echo '<a href="admin_only.php">Manage website</a>';
+            }
         ?>
         </div>
 
