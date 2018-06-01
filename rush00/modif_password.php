@@ -28,6 +28,4 @@ if ($_POST['submit'] === 'OK' && $_SESSION['login'] != NULL && $_POST['newpw'] !
     else
         echo "ERROR\n";
 }
-else
-    echo "ERROR\n";
 ?>

@@ -59,6 +59,4 @@ if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] !=
         }
     }
 }
-else
-    echo "ERROR\n";
 ?>
