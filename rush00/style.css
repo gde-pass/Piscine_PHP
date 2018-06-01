@@ -1,18 +1,18 @@
 body
 {
-    font-family: Optima, serif;
+    font-family: Nunito, serif;
     font-size: 22px;
     margin: 0px;
     padding: 0px;
-    background-color: rgb(218, 224, 222);
+    background-color: #232323;
 }
 
 
-/* CSS HEADER */
+/* ========================================================== HEADER ============================================================= */
 nav
 {
     width: 100%;
-    background-color: #424558;
+    background-color: #ff5454;
 }
 
 nav > ul
@@ -76,49 +76,13 @@ nav li:hover .submenu
     display: none;
 }
 
-.submenu li
-{
-    border-bottom: 1px solid #CCC
-}
-
 .submenu li a
 {
     padding: 15px 30px;
     font-size: 16px;
     color: #22538;
     width: 270px;
-}
-
-.menu-accueil:hover
-{
-    border-top: 5px solid #e44d26;
-    background-color: RGBa(228, 77, 38, 0.15);
-}
-
-.menu-shop:hover
-{
-    border-top: 5px solid #0070bb;
-    background-color: RGBa(000, 112, 192, 0.15);
-}
-
-
-.menu-log_unlog:hover
-{
-    border-top: 5px solid #f1dc4f;
-    background-color: RGBa(241, 211, 79, 0.15);
-}
-
-
-.menu-inscription:hover
-{
-    border-top: 5px solid #d631cb;
-    background-color: RGBa(214, 49, 43, 0.15);
-}
-
-.menu-user_profile:hover
-{
-    border-top: 5px solid #d631cb;
-    background-color: RGBa(214, 49, 43, 0.15);
+    background-color: rgba(239, 239, 239, .90);
 }
 
 nav > ul > li:hover > a
@@ -130,64 +94,130 @@ nav > ul > li:hover > a
 {
     color: #EEE;
     font-weight: bold;
-    background-color: #424558;
-}
-
-.menu-accueil .submenu li:hover a
-{
-    border-left: 5px solid #e44d26;
-}
-
-.menu-shop .submenu li:hover a
-{
-    border-left: 5px solid #0070bb;
-}
-
-.menu-log_unlog .submenu li:hover a
-{
-    border-left: 5px solid #f1dc4f;
-}
-
-.menu-inscription .submenu li:hover a
-{
-    border-left: 5px solid #d631cb;
-}
-
-.menu-user_profile .submenu li:hover a
-{
-    border-left: 5px solid #d631cb;
+    background-color: #ff5454;
+    border-left: 5px solid #ffffff;
 }
 
 img#header_logo
 {
-    width: 163.67px;
-}
-/* FIN CSS HEADER */
-
-.wrapper
-{
-    width: 100%;
-    margin: 0 auto;
-
-    text-align: center;
-    border-top-style: solid;
-    border-width: 4px;
-    border-color: orange;
+    padding: 15px 15px 0 15px;
+    width: 240px;
 }
 
-.itembox
+/* ========================================================== HOMEPAGE ============================================================= */
+
+.content
 {
-    width: 500px;
-    height: 500px;
-    display: inline-block;
+    background-color: #efefef;
+}
 
-    margin-top: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
+.featctnt
+{
+    width:100vw;
+    height:30vh;
+    background-color: blue;
+    margin-bottom: 3vh;
+}
 
+.latestarticles
+{
+    text-align:center;
+    width:100%;
+}
 
-    border-style: solid;
-    border-width: 2px;
-    border-color: red;
+.articles
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article
+{
+    max-width: 600px;
+    min-width: 400px;
+    margin: 1.7vh;
+    width:20vw;
+    height:30vh;
+    background-color: #ff5454;
+    display:flex;
+    flex-direction: column;
+}
+
+.arttitle .shortdes
+{
+    width:100%;
+}
+
+.shortdes > a
+{
+    font-size:.8em;
+    margin: 2px;
+    word-wrap: break-word;
+}
+
+.shortdes
+{
+
+    max-width: 70%;
+    text-overflow: ellipsis;
+    max-height: 65px;
+}
+
+.article > .price
+{
+    width:20%;
+}
+
+.arttitle
+{
+    margin-right:15px;
+}
+
+.arttitle > h2
+{
+    color: #ffffff;
+    font-size:1.2em;
+    margin: 20px 0 20px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.downinfos
+{
+    color: #ffffff;
+    padding:0 20px 20px 20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.artpic
+{
+    width:100%;
+    height:290px;
+    overflow: hidden;
+    background-color: red;
+}
+
+.artpic > a > img
+{
+    margin-top: 30%
+    transform: translateY(-50%);
+    width:100%;
+}
+
+/* ========================================================== FOOTER ============================================================= */
+
+.footer
+{
+    width:100%;
+    height:30vh;
+    background-color: #232323;
+}
+
+.footer > a
+{
+    color: #ff5454s;
 }
