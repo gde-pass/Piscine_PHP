@@ -23,7 +23,13 @@ function add_user($hashed_pw)
     $unserialized_array[] = array('login' => $_POST['login'], 'passwd' => $hashed_pw);
     $serialized_array = serialize($unserialized_array);
     file_put_contents('private/users', $serialized_array);
-    echo "Your account is now created, you can log in with", PHP_EOL;
+    echo '<html><head>
+            <meta charset="utf-8">
+            <title>Mini Shop</title>
+        </head><body>
+            <p>Your account is now created, you can log in with <a href="connexion.php">Here</a></p>
+        </body></html>';
+    
 }
 
 if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] != NULL && $_POST['passwd2'] != NULL)
@@ -32,7 +38,14 @@ if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] !=
     $hashed_pw_confirm = hash('whirlpool', $_POST['passwd2']);
 
     if ($hashed_pw != $hashed_pw_confirm)
-        echo "Confirmation de mot de passe echoué", PHP_EOL;
+    {
+        echo '<html><head>
+                <meta charset="utf-8">
+                <title>Mini Shop</title>
+            </head><body>
+                <p>Passwords doesn\'t match ! For retry please follow the link: <a href="inscription.php">Sign In</a></p>
+            </body></html>';
+    }
     else
     {
         if (!(file_exists('/private')))
