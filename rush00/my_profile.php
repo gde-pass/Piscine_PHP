@@ -15,7 +15,7 @@ include "header.php";
         <?php
             if ($_SESSION['admin'] == 'yes')
             {
-                echo '<a href="install.php">Initialise website</a>';
+                echo '<a href="install.php">Initialise website</a> <br />';
                 echo '<a href="admin_only.php">Manage website</a>';
             }
         ?>
