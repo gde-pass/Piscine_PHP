@@ -1,156 +1,49 @@
 <?php
 session_start();
 include 'install.php';
+include 'header.php';
 if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
 	create_admin_account();
-include "header.php";
+if (!(file_exists('private/articles'))) // Creation du fichier articles et create 1er article
+	create_articles();
+
+$articles = file_get_contents('private/articles');
+$articles = unserialize($articles);
+
 ?>
+<div class=content>
+	<div class=featctnt>
+		##featured content##
+	</div>
+	<div class=latestarticles>
+		<h2>Latest Articles</h2>
+	</div>
 
-		<div class=content>
-			<div class=featctnt>
-				##featured content##
+<?PHP
+foreach ($articles as $key => $value)
+{
+echo "<div class=articles>
+		<div class=article>
+			<div class=artpic>
+				<a href=#><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
 			</div>
-			<div class=latestarticles>
-				<h2>Latest Articles</h2>
+			<div class=arttitle>
+				<h2>". $value['title'] ."</h2>
 			</div>
-		<div class=articles>
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
+			<div class=downinfos>
+				<div class=shortdes>
+                    <a>". $value['description'] ."</a>
 				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
+				<div class=price>
+					<a>". $value['price'] ."€</a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>";
+}
+?>
+</div>
+
 <?php
-include"footer.php";
+include 'footer.php';
 ?>
