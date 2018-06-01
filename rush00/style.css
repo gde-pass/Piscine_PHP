@@ -115,6 +115,12 @@ nav li:hover .submenu
     background-color: RGBa(214, 49, 43, 0.15);
 }
 
+.menu-user_profile:hover
+{
+    border-top: 5px solid #d631cb;
+    background-color: RGBa(214, 49, 43, 0.15);
+}
+
 nav > ul > li:hover > a
 {
     padding: 15px 30px 20px 30px;
@@ -143,6 +149,11 @@ nav > ul > li:hover > a
 }
 
 .menu-inscription .submenu li:hover a
+{
+    border-left: 5px solid #d631cb;
+}
+
+.menu-user_profile .submenu li:hover a
 {
     border-left: 5px solid #d631cb;
 }
