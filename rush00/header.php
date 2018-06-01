@@ -47,7 +47,7 @@ session_start();
 				if ($_SESSION['connexion_status'] == 'connected')
 				{
 					echo '<li class="menu-user_profile" style="float:right;">
-					<a href="my_profile.php">My Profile</a>
+					<a href="my_profile.php">'.$_SESSION['login'].'</a>
 					<ul class="submenu">
 						<li> <a href="#">My shopping car</a></li>
 						<li> <a href="my_profile.php">My account</a></li>
