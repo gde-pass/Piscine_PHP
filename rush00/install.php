@@ -29,4 +29,5 @@ function create_articles()
 }
 create_articles();
 create_admin_account();
+header('Location: index.php');
 ?>

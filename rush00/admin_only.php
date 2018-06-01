@@ -2,7 +2,7 @@
 include "header.php";
 ?>
 <div class=contentform>
-    <form class="formbg" action="admin_only.php" method="post">
+    <form class="formbg" action="create_article.php" method="post">
     <p>
         <h1>Create article</h1>
         <input class=forminput placeholder="Title" type="text" name="title" autofocus required />
@@ -18,7 +18,7 @@ include "header.php";
     </form>
 </div>
 <div class=contentform>
-    <form class="formbg" action="admin_only.php" method="post">
+    <form class="formbg" action="upgrade_user.php" method="post">
     <p>
         <h1>Upgrade a user</h1>
         <input class=forminput placeholder="User login" type="text" name="user_login" autofocus required />
