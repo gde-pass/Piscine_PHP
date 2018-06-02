@@ -143,6 +143,7 @@ img#header_logo
 {
 	max-width: 600px;
 	min-width: 400px;
+	min-height: 500px;
 	margin: 1.7vh;
 	width:20vw;
 	height:30vh;
@@ -169,6 +170,7 @@ img#header_logo
 	max-width: 70%;
 	text-overflow: ellipsis;
 	max-height: 65px;
+	overflow: hidden;
 }
 
 .article > .price
