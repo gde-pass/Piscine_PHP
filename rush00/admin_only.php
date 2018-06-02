@@ -29,6 +29,16 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
 </div>
 
 <div class=contentform>
+    <form class="formbg" action="create_category.php" method="post">
+    <p>
+        <h1>Create category</h1>
+        <input class=forminput placeholder="Title" type="text" name="category" autofocus required />
+        <input class=buttoninput type="submit" name="submit" value="OK" />
+    </p>
+    </form>
+</div>
+
+<div class=contentform>
     <form class="formbg" action="modify_article.php" method="post">
     <p>
         <h1>Modify article(a faire)</h1>

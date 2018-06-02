@@ -11,6 +11,16 @@ function create_admin_account()
     }
 }
 
+function create_categories()
+{
+        if(!file_exists('private/categoies'))
+        {
+            $catgories = array(0 => "peripherals");
+            $serialized_array = serialize($categories);
+            file_put_contents('/private/categories', $serialized_array);
+        }
+}
+
 function create_articles()
 {
     if (!(file_exists('private/articles')))
@@ -28,6 +38,7 @@ function create_articles()
         file_put_contents('private/articles', $serialized_array);
     }
 }
+create_categories();
 create_articles();
 create_admin_account();
 header('Location: index.php');

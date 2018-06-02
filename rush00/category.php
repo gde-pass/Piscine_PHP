@@ -1,4 +1,6 @@
-
+<?php
+include ("header.php");
+?>
 		<div class=catcontent>
 			<div class=latestarticles>
 				<h2>$category_name</h2>
