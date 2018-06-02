@@ -14,7 +14,7 @@ include 'header.php';
 	{
 	echo "	<div class=article>
 			<div class=artpic>
-				<a href=#><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
+				<a href='article.php?article=".$value['title']."'><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
 			</div>
 			<div class=arttitle>
 				<h2>". $value['title'] ."</h2>
@@ -24,7 +24,7 @@ include 'header.php';
                     <a>". $value['description'] ."</a>
 				</div>
 				<div class=price>
-					<a>". $value['price'] ."€</a>
+					<h2>". $value['price'] ."€</h2>
 				</div>
 			</div>
 		</div>";

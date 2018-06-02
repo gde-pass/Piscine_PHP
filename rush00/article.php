@@ -10,6 +10,7 @@ if ($_GET["article"] && isset($_GET["article"]))
 			$description = $value["description"];
 			$price = $value["price"];
 			$img = $value["img"];
+			$quantity = $value["quantity"];
 		}
 	}
 	if(!isset($artname))
@@ -34,11 +35,19 @@ else
 					<div class=artrightcol>
 						<div class=articleimg><img src=<?php echo $img;?>></div>
 						<div class=price><h1><?php echo($price);?> €</h1></div>
+						<div class=qtt><a>Quantity : </a><h2><?php if($quantity == 0)echo("Out of stock"); else echo($quantity);?></h2>
+						</div>
+						<?php if($quantity<10 && $quantity != 0) echo("<a>Warning, we will run out of stock !</a>");?>
 					</div>
 				</div>
 				<div class=botbox>
 					<div class=tocart>
-						<input class=buttoncart type="submit" name="submit" value="ADD TO CART" />
+						<?php
+						if($quantity == 0)
+						echo('<input class=buttoncartgrey type="submit" name="" value="Out of stock" />');
+						else
+						echo('<input class=buttoncart type="submit" name="submit" value="ADD TO CART" />');
+						?>
 					</div>
 				</div>
 			</div>
