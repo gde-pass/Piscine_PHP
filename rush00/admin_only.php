@@ -65,6 +65,22 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <br>
         <input class=forminput placeholder="Description" type="text" name="description" />
         <br>
+        <input class=forminput placeholder="Quantity" type="number" name="quantity" required />
+        <br>
+        <fieldset>
+            <legend>Please select article's category</legend>
+            <?php if (file_exists('private/categories') == TRUE)
+            {
+                foreach ($categ as $value)
+                {
+                    echo "<div>
+                            <input type=checkbox id=". $value ." name=". $value .">
+                            <label for=". $value .">". $value ."</label>
+                        </div>";
+                }
+            }
+            ?>
+        </fieldset>
         <input class=buttoninput type="submit" name="submit" value="OK" />
     </p>
     </form>
