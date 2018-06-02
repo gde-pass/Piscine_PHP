@@ -57,13 +57,13 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <br>
         <input class=forminput placeholder="Old Title" type="text" name="old_title" autofocus required />
         <br>
-        <input class=forminput placeholder="New Title" type="text" name="new_title" />
+        <input class=forminput placeholder="New Title" type="text" name="new_title" required/>
         <br>
-        <input class=forminput placeholder="URL Image" type="url" name="img"  />
+        <input class=forminput placeholder="URL Image" type="url" name="img" required />
         <br>
-        <input class=forminput placeholder="Price" type="number" name="price" step="0.01"  />
+        <input class=forminput placeholder="Price" type="number" name="price" step="0.01"  required/>
         <br>
-        <input class=forminput placeholder="Description" type="text" name="description" />
+        <input class=forminput placeholder="Description" type="text" name="description" required/>
         <br>
         <input class=forminput placeholder="Quantity" type="number" name="quantity" required />
         <br>
