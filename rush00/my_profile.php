@@ -19,7 +19,6 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
         <?php
             if ($_SESSION['admin'] == 'yes')
             {
-                echo '<a href="install.php">Initialise website</a> <br />';
                 echo '<a href="admin_only.php">Manage website</a>';
             }
         ?>
