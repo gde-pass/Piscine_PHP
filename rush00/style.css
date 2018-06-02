@@ -466,13 +466,26 @@ img#header_logo
 	color: #ff5454;
 }
 
+/* ========================================================== CART ============================================================= */
 
+.cartcontent
+{
+	text-align: center;
+	margin: 0 auto;
+	padding-top:1vh;
+	height: 80vh;
+	background-color: #efefef;
+}
 
+.cart
+{
+	padding:0.001px;
+	margin:5vh;
+	height:65vh;
+	background-color: #ffffff;
+}
 
-
-
-
-
+.cart
 
 
 
