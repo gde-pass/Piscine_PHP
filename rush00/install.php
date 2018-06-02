@@ -35,7 +35,8 @@ function create_articles()
         $price = '59';
         $img = 'ressources/img/Corsair_Gaming_K55_RGB.jpg';
         $category = '0Peripherals0Computers0';
-        $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img, 'category' => $category));
+        $quantity = '8';
+        $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img, 'category' => $category, 'quantity' => $quantity));
         $serialized_array = serialize($articles);
         file_put_contents('private/articles', $serialized_array);
     }

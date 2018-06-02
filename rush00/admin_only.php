@@ -18,15 +18,19 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <br>
         <input class=forminput placeholder="Description" type="text" name="description" required />
         <br>
+        <input class=forminput placeholder="Quantity" type="number" name="quantity" required />
+        <br>
         <fieldset>
             <legend>Please select article's category</legend>
-            <?php
-            foreach ($categ as $value)
+            <?php if (file_exists('private/categories') == TRUE)
             {
-                echo "<div>
-                        <input type=checkbox id=". $value ." name=". $value .">
-                        <label for=". $value .">". $value ."</label>
-                    </div>";
+                foreach ($categ as $value)
+                {
+                    echo "<div>
+                            <input type=checkbox id=". $value ." name=". $value .">
+                            <label for=". $value .">". $value ."</label>
+                        </div>";
+                }
             }
             ?>
         </fieldset>

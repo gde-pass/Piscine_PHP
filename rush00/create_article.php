@@ -27,14 +27,14 @@ function find_checked_box()
     }
     return ($box);
 }
-if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NULL AND $_POST['description'] != NULL)
+if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NULL AND $_POST['description'] != NULL AND $_POST['quantity'] != NULL)
 {
     if (img_checker($_POST['img']) == TRUE)
     {
         $category = find_checked_box();
         $articles = file_get_contents('private/articles');
         $articles = unserialize($articles);
-        $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img'], 'category' => $category);
+        $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img'], 'category' => $category, 'quantity' => $_POST['quantity']);
         $articles = serialize($articles);
         file_put_contents('private/articles', $articles);
         header('Location: index.php');
