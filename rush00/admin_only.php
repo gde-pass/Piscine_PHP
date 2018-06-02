@@ -18,6 +18,11 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <br>
         <input class=forminput placeholder="Description" type="text" name="description" required />
         <br>
+        <fieldset>
+            <legend>Please select article's category</legend>
+
+                <!-- INSERER GENERATEUR BOUTON SELON NB CATEGORY -->
+        </fieldset>
         <input class=buttoninput type="submit" name="submit" value="OK" />
     </p>
     </form>

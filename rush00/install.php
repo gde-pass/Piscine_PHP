@@ -21,8 +21,9 @@ function create_articles()
         silencieuses et ses 6 touches macros, vous avez à votre disposition une surface
         de jeu idéale et performante.";
         $price = '59';
-        $img = 'ressources/img/Corsair_Gaming_K55_RGN.jpg';
-        $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img));
+        $img = 'ressources/img/Corsair_Gaming_K55_RGB.jpg';
+        $category = 'peripherals0computers';
+        $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img, 'category' => $category));
         $serialized_array = serialize($articles);
         file_put_contents('private/articles', $serialized_array);
     }
