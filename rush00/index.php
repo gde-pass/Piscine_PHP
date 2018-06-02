@@ -9,12 +9,12 @@ $articles = unserialize($articles);
 	</div>
 	<div class=latestarticles>
 		<h2>Latest Articles</h2>
-
-<?PHP
-foreach ($articles as $key => $value)
-{
-echo "<div class=articles>
-		<div class=article>
+	</div>
+	<div class="articles">
+	<?PHP
+	foreach ($articles as $key => $value)
+	{
+	echo "	<div class=article>
 			<div class=artpic>
 				<a href=#><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
 			</div>
@@ -29,10 +29,9 @@ echo "<div class=articles>
 					<a>". $value['price'] ."€</a>
 				</div>
 			</div>
-		</div>
-	</div>";
-}
-?>
+		</div>";
+	}
+	?>
 	</div>
 </div>
 <?php

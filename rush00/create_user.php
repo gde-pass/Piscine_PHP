@@ -18,12 +18,7 @@ function add_user($hashed_pw)
     $unserialized_array[] = array('login' => $_POST['login'], 'passwd' => $hashed_pw, 'admin' => 'no');
     $serialized_array = serialize($unserialized_array);
     file_put_contents('private/users', $serialized_array);
-    echo '<html><head>
-            <meta charset="utf-8">
-            <title>Mini Shop</title>
-        </head><body>
-            <p>Your account is now created, you can log in with <a href="connexion.php">Here</a></p>
-        </body></html>';
+    header("Location: connexion.php?action=create");
 
 }
 
@@ -33,14 +28,7 @@ if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] !=
     $hashed_pw_confirm = hash('whirlpool', $_POST['passwd2']);
 
     if ($hashed_pw != $hashed_pw_confirm)
-    {
-        echo '<html><head>
-                <meta charset="utf-8">
-                <title>Mini Shop</title>
-            </head><body>
-                <p>Passwords doesn\'t match ! For retry please follow the link: <a href="inscription.php">Sign In</a></p>
-            </body></html>';
-    }
+        header("Location: inscription.php?action=error&login=".$_POST['login']);
     else
     {
         if (!(file_exists('/private')))
@@ -53,7 +41,7 @@ if ($_POST['submit'] === 'OK' && $_POST['login'] != NULL && $_POST['passwd1'] !=
         else
         {
             if (already_registered() == TRUE)
-                echo "Cette idantifiant est déjà utilisé, veuillez en choisir un autre", PHP_EOL;
+                header("Location: inscription.php?action=error2");
             else
                 add_user($hashed_pw);
         }
