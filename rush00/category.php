@@ -35,7 +35,7 @@ else
 					$i = 1;
 					echo "	<div class=article>
 					<div class=artpic>
-					<a href=#><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
+					<a href='article.php?article=".$value['title']."'><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
 					</div>
 					<div class=arttitle>
 					<h2>". $value['title'] ."</h2>
