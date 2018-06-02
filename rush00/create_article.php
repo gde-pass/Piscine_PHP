@@ -18,6 +18,7 @@ if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NUL
         $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img']);
         $articles = serialize($articles);
         file_put_contents('private/articles', $articles);
+        header('Location: index.php');
     }
     else
         echo "Merci de bien vouloir insérer le lien d'une image valide", PHP_EOL;
