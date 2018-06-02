@@ -13,11 +13,13 @@ function create_admin_account()
 
 function create_categories()
 {
-        if(!file_exists('private/categoies'))
+        if(!(file_exists('private/categories')))
         {
-            $catgories = array(0 => "peripherals");
+            $categories = array();
+            $categories[0] = "Peripherals";
+            $categories[1] = "Computers";
             $serialized_array = serialize($categories);
-            file_put_contents('/private/categories', $serialized_array);
+            file_put_contents('private/categories', $serialized_array);
         }
 }
 
@@ -32,7 +34,7 @@ function create_articles()
         de jeu idéale et performante.";
         $price = '59';
         $img = 'ressources/img/Corsair_Gaming_K55_RGB.jpg';
-        $category = '0peripherals0computers0';
+        $category = '0Peripherals0Computers0';
         $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img, 'category' => $category));
         $serialized_array = serialize($articles);
         file_put_contents('private/articles', $serialized_array);

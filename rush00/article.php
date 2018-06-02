@@ -33,7 +33,7 @@ else
 					</div>
 					<div class=artrightcol>
 						<div class=articleimg><img src=<?php echo $img;?>></div>
-						<div class=price><h1><?php echo($price);?></h1></div>
+						<div class=price><h1><?php echo($price);?> €</h1></div>
 					</div>
 				</div>
 				<div class=botbox>
