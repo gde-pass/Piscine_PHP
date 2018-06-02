@@ -9,7 +9,6 @@ $articles = unserialize($articles);
 	</div>
 	<div class=latestarticles>
 		<h2>Latest Articles</h2>
-	</div>
 
 <?PHP
 foreach ($articles as $key => $value)
@@ -34,8 +33,8 @@ echo "<div class=articles>
 	</div>";
 }
 ?>
+	</div>
 </div>
-
 <?php
 include 'footer.php';
 ?>
