@@ -27,17 +27,7 @@ function find_checked_box()
     }
     return ($box);
 }
-    if (img_checker($_POST['img']) == TRUE)
-    {
-        $category = find_checked_box();
-        $articles = file_get_contents('private/articles');
-        $articles = unserialize($articles);
-        $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img'], 'category' => $category, 'quantity' => $_POST['quantity']);
-        $articles = serialize($articles);
-        file_put_contents('private/articles', $articles);
-        header('Location: index.php');
-    }
-    else
-        echo "Merci de bien vouloir insérer le lien d'une image valide", PHP_EOL;
-}
+
+
+
 ?>
