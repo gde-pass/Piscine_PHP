@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "header.php";
 if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
 {
