@@ -16,13 +16,9 @@ session_start();
 
 		<ul>
 			<li>
-				<img id="header_logo" src="ressources/img/minishop.svg" alt="logo" />
+				<a href="index.php"><img id="header_logo" src="ressources/img/minishop.svg" alt="logo" /></a>
 			</li>
-			<li class="menu-accueil">
-				<a href="index.php">Home</a>
-			</li>
-
-			<li class="menu-shop">
+			<li class="nav">
 				<a href="#">Shop</a>
 				<ul class="submenu">
 					<li> <a href="#">All products</a></li>
@@ -34,7 +30,7 @@ session_start();
 				</ul>
 			</li>
 
-			<li class="menu-log_unlog" style="float:right;">
+			<li class="nav" style="float:right;">
 				<?php
 					if ($_SESSION['connexion_status'] == 'disconnected')
 						echo '<a href="connexion.php">Log In</a>';
@@ -46,7 +42,7 @@ session_start();
 			<?php
 				if ($_SESSION['connexion_status'] == 'connected')
 				{
-					echo '<li class="menu-user_profile" style="float:right;">
+					echo '<li class="nav" style="float:right;">
 					<a href="my_profile.php">'.$_SESSION['login'].'</a>
 					<ul class="submenu">
 						<li> <a href="#">My shopping car</a></li>
@@ -56,7 +52,7 @@ session_start();
 				}
 			?>
 
-			<li class="menu-inscription" style="float:right;">
+			<li class="nav" style="float:right;">
 				<?php
 					if ($_SESSION['connexion_status'] == 'disconnected')
 						echo '<a href="inscription.php"> Sign In</a>';

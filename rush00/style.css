@@ -49,7 +49,7 @@ nav a
 
 nav > ul > li > a
 {
-	padding: 20px 30px;
+	padding: 15px 15px;
 	color: #FFF;
 }
 
@@ -61,6 +61,11 @@ nav li:hover .submenu
 	left: 0px;
 	padding: 0px;
 	z-index: 42;
+}
+
+.nav
+{
+	padding-top: 5px;
 }
 
 .submenu li a:link
@@ -102,7 +107,6 @@ nav > ul > li:hover > a
 
 img#header_logo
 {
-	padding: 15px 15px 0 15px;
 	width: 240px;
 }
 
