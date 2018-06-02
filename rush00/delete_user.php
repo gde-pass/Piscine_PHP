@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 function check_admin()
 {
     $pass = hash('whirlpool', $_POST['password']);
@@ -26,23 +25,23 @@ function already_registered()
     return FALSE;
 }
 
-function upgrade_user($user)
+function delete_user($user)
 {
     $i = 0;
     $array = file_get_contents('private/users');
-    $unserialized_array = unserialize($array);
-    foreach ($unserialized_array as $account)
+    $array = unserialize($array);
+    foreach ($array as $element)
     {
-        if ($_POST['user_login'] === $account['login'])
+        if ($element['login'] === $user)
         {
-            $unserialized_array[$i]['admin'] = 'yes';
-            $serialized_array = serialize($unserialized_array);
-            file_put_contents('private/users', $serialized_array);
-            return TRUE;
+            unset($array[$i]);
+            sort($array);
+            $array = serialize($array);
+            file_put_contents('private/users', $array);
         }
         $i++;
     }
-    return FALSE;
+
 }
 
 if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
@@ -56,11 +55,13 @@ else
     {
         if (check_admin() == TRUE AND already_registered() == TRUE)
         {
-            upgrade_user($_POST['user_login']);
+            delete_user($_POST['user_login']);
             header('Location: admin_only.php');
         }
         else
             echo "ERROR\n";
     }
 }
+
+
 ?>
