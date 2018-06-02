@@ -7,8 +7,7 @@ include "header.php";
         <?php
         if($_GET["action"] === "create")
             echo("<div class=msgsucces><a>Your account has been created, you may log-in !</a></div>");
-        else if(à)
-            if($_GET["action"] === "error")
+        else if($_GET["action"] === "error")
             echo("<div class=msgerror><a>ERROR : Invalid Login/Password</a></div>");
         ?>
         <h1>Log-In</h1>
