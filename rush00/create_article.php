@@ -1,8 +1,8 @@
 <?PHP
 if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
 {
-    header('HTTP/1.0 401 Unauthorized');
-    header('Location: index.php');
+   header('HTTP/1.0 401 Unauthorized');
+   header('Location: index.php');
 }
 
 function img_checker($img)
@@ -15,13 +15,26 @@ function img_checker($img)
         return FALSE;
 }
 
+function find_checked_box()
+{
+    $box = '0';
+    foreach ($_POST as $key => $value)
+    {
+        if ($value == 'on')
+        {
+            $box = $box . $key . "0";
+        }
+    }
+    return ($box);
+}
 if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NULL AND $_POST['description'] != NULL)
 {
     if (img_checker($_POST['img']) == TRUE)
     {
+        $category = find_checked_box();
         $articles = file_get_contents('private/articles');
         $articles = unserialize($articles);
-        $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img']);
+        $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img'], 'category' => $category);
         $articles = serialize($articles);
         file_put_contents('private/articles', $articles);
         header('Location: index.php');
@@ -29,5 +42,4 @@ if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NUL
     else
         echo "Merci de bien vouloir insérer le lien d'une image valide", PHP_EOL;
 }
-
 ?>

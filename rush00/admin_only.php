@@ -20,8 +20,15 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <br>
         <fieldset>
             <legend>Please select article's category</legend>
-
-                <!-- INSERER GENERATEUR BOUTON SELON NB CATEGORY -->
+            <?php
+            foreach ($categ as $value)
+            {
+                echo "<div>
+                        <input type=checkbox id=". $value ." name=". $value .">
+                        <label for=". $value .">". $value ."</label>
+                    </div>";
+            }
+            ?>
         </fieldset>
         <input class=buttoninput type="submit" name="submit" value="OK" />
     </p>
