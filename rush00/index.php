@@ -1,7 +1,5 @@
 <?php
 include 'header.php';
-$articles = file_get_contents('private/articles');
-$articles = unserialize($articles);
 ?>
 <div class=content>
 	<div class=featctnt>

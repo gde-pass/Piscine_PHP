@@ -1,5 +1,9 @@
 <?php
 session_start();
+$categ = file_get_contents("private/categories");
+$categ = unserialize($categ);
+$articles = file_get_contents('private/articles');
+$articles = unserialize($articles);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,12 +25,12 @@ session_start();
 			<li class="nav">
 				<a href="#">Shop</a>
 				<ul class="submenu">
-					<li> <a href="#">All products</a></li>
-					<li> <a href="#">Computers</a></li>
-					<li> <a href="#">Mobile Phones</a></li>
-					<li> <a href="#">Tablets</a></li>
-					<li> <a href="#">Péripherals</a></li>
-					<li> <a href="#">Accessorises</a></li>
+					<?php
+					foreach ($categ as $elem) 
+					{
+						echo("<li><a href='category.php?cat=".$elem."'>".$elem."</a><li>");
+					}
+					?>
 				</ul>
 			</li>
 

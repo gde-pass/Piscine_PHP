@@ -1,148 +1,62 @@
 <?php
-include ("header.php");
+if ($_GET["cat"] && isset($_GET["cat"]))
+{
+	include ("header.php");
+	foreach($categ as $elem)
+	{
+		if ($elem === $_GET["cat"])
+		{
+			$catname = $_GET["cat"];
+		}
+	}
+	if(!isset($catname))
+	{
+		header('HTTP/1.0 404 File Not Found');
+    	header('Location: index.php');
+	}
+}
+else
+{
+	header('HTTP/1.0 404 File Not Found');
+    header('Location: index.php');
+}
 ?>
 		<div class=catcontent>
 			<div class=latestarticles>
-				<h2>$category_name</h2>
+				<h2><?php echo($catname);?></h2>
 			</div>
 		<div class=articles>
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
+		<?php
+			$i = 0;
+			foreach ($articles as $key => $value)
+			{
+				if(strpos($value['category'], $catname) !== false)
+				{
+					$i = 1;
+					echo "	<div class=article>
+					<div class=artpic>
+					<a href=#><img src=\"". $value['img'] ."\" alt=\"". $value['title'] ."\"></a>
+					</div>
+					<div class=arttitle>
+					<h2>". $value['title'] ."</h2>
+					</div>
+					<div class=downinfos>
 					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
+                    <a>". $value['description'] ."</a>
 					</div>
 					<div class=price>
-						<a>$prix</a>
+					<a>". $value['price'] ."€</a>
 					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
 					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
-
-			<div class=article>
-				<div class=artpic>
-					<a href="linktoarticlepage"><img src=uploads/bato.png alt="nomArticle"></a>
-				</div>
-				<div class=arttitle>
-					<h2>$titre_de_l'articleooooooooooooooooooo</h2>
-				</div>
-				<div class=downinfos>
-					<div class=shortdes>
-						<a>$petitsegmentdeladescriptiondel'article</a>
-					</div>
-					<div class=price>
-						<a>$prix</a>
-					</div>
-				</div>
-			</div>
+					</div>";
+				}
+			}
+			if ($i == 0)
+			{
+				echo("<a>Woops ! There is still no article in this category !</a>");
+			}
+	?>
 		</div>
-	</div>
 <?php
-include"footer.php";
+include 'footer.php';
 ?>
