@@ -1,5 +1,11 @@
 <?php
+session_start();
 include "header.php";
+if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
+{
+    header('HTTP/1.0 401 Unauthorized');
+    header('Location: index.php');
+}
 ?>
 <div class=contentform>
     <form class="formbg" action="create_article.php" method="post">

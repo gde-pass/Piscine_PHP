@@ -1,8 +1,10 @@
 <?php
 session_start();
-include 'install.php';
-if (!(file_exists('private/users'))) // Creation du fichier users et create admin account
-    create_admin_account();
+if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
+{
+    header('HTTP/1.0 401 Unauthorized');
+    header('Location: index.php');
+}
 
 function auth($login, $passwd)
 {

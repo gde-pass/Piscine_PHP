@@ -1,5 +1,10 @@
 <?php
 session_start();
+if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
+{
+    header('HTTP/1.0 401 Unauthorized');
+    header('Location: index.php');
+}
 function modif_account($hashed_oldpw, $hashed_newpw)
 {
     $i = 0;
