@@ -11,6 +11,12 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
     <div class=backcontent>
         <form class="backdivbg" action="delete_category.php" method="post">
         <p>
+            <?php
+            if(isset($_GET["action"]) && $_GET["action"] === "create")
+                echo("<div class=msgsucces><a>Your category has been deleted ! Yupi !</a></div>");
+            else if(isset($_GET["action"]) && $_GET["action"] === "error")
+                echo("<div class=msgerror><a>ERROR : Check title, Login and Password</a></div>");
+            ?>
             <h1>Delete category</h1>
             <input class=forminput placeholder="Title" type="text" name="category" autofocus required />
             <br>

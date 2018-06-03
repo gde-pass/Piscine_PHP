@@ -37,9 +37,15 @@ if ($_POST['title'] != NULL AND $_POST['img'] != NULL AND $_POST['price'] != NUL
         $articles[] = array('title' => $_POST['title'], 'description' => $_POST['description'], 'price' => $_POST['price'], 'img' => $_POST['img'], 'category' => $category, 'quantity' => $_POST['quantity']);
         $articles = serialize($articles);
         file_put_contents('private/articles', $articles);
-        header('Location: index.php');
+        header('Location: article_panel.php?action=create');
     }
     else
-        echo "Merci de bien vouloir insérer le lien d'une image valide", PHP_EOL;
+    {
+        header('Loaction: article_panel.php?action=error');
+    }
+}
+else
+{
+    header('Loaction: article_panel.php?action=error');
 }
 ?>

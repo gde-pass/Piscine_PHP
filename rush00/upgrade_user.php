@@ -57,10 +57,10 @@ else
         if (check_admin() == TRUE AND already_registered() == TRUE)
         {
             upgrade_user($_POST['user_login']);
-            header('Location: admin_only.php');
+            header('Location: upgr_user.php?action=create');
         }
         else
-            echo "ERROR\n";
+            header('Location: upgr_user.php?action=error');
     }
 }
 ?>

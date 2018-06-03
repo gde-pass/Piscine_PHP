@@ -56,10 +56,10 @@ else
         if (check_admin() == TRUE AND already_registered() == TRUE)
         {
             delete_user($_POST['user_login']);
-            header('Location: admin_only.php');
+            header('Location: remove_user.php?action=create');
         }
         else
-            echo "ERROR\n";
+            header('Location: remove_user.php?action=error');
     }
 }
 

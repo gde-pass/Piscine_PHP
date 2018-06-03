@@ -11,6 +11,12 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
     <div class=backcontent>
         <form class="backdivbg" action="create_article.php" method="post">
             <p>
+                <?php
+                if(isset($_GET["action"]) && $_GET["action"] === "create")
+                    echo("<div class=msgsucces><a>Your article has been created ! Yupi !</a></div>");
+                else if(isset($_GET["action"]) && $_GET["action"] === "error")
+                    echo("<div class=msgerror><a>ERROR : Image invalid ?</a></div>");
+                ?>
                 <h1>Create article</h1>
                 <input class=forminput placeholder="Title" type="text" name="title" autofocus required />
                 <br>

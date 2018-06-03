@@ -45,10 +45,10 @@ else
         if (check_admin() == TRUE)
         {
             delete_article($_POST['title']);
-            header('Location: admin_only.php');
+            header('Location: del_article.php?action=create');
         }
         else
-            echo "ERROR\n";
+            header('Location: del_article.php?action=error');
     }
 }
 ?>

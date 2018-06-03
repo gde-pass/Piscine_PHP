@@ -12,7 +12,11 @@ if ($_POST['category'] != NULL)
 	$category[] = $_POST['category'];
 	$category = serialize($category);
 	file_put_contents('private/categories', $category);
-	header('Location: index.php');
+	header('Location: add_category.php?action=create');
+}
+else
+{
+	header('Location: add_category.php?action=error');
 }
 
 ?>

@@ -82,4 +82,5 @@ foreach ($articles as $key => $value)
 
 $articles = serialize($articles);
 file_put_contents('private/articles', $articles);
+header("Location: modif_article.php")
 ?>

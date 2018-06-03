@@ -12,6 +12,12 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
         <div class=backdivbg>
             <form class="formbg" action="delete_article.php" method="post">
             <p>
+                <?php
+                if(isset($_GET["action"]) && $_GET["action"] === "create")
+                    echo("<div class=msgsucces><a>Your article has been deleted ! Yupi !</a></div>");
+                else if(isset($_GET["action"]) && $_GET["action"] === "error")
+                    echo("<div class=msgerror><a>ERROR : Check title, Login and Password</a></div>");
+                ?>
                 <h1>Delete article</h1>
                 <input class=forminput placeholder="Title" type="text" name="title" autofocus required />
                 <br>
