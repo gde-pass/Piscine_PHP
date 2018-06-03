@@ -28,6 +28,24 @@ function find_checked_box()
     return ($box);
 }
 
+function delete_article($article)
+{
+    $i = 0;
+    $array = file_get_contents('private/articles');
+    $array = unserialize($array);
+    foreach ($array as $element)
+    {
+        if ($element['title'] === $article)
+        {
+            unset($array[$i]);
+            sort($array);
+            $array = serialize($array);
+            file_put_contents('private/articles', $array);
+        }
+        $i++;
+    }
+}
+
 $articles = file_get_contents('private/articles');
 $articles = unserialize($articles);
 $checked_box = find_checked_box();
@@ -48,5 +66,8 @@ $article['img'] = $_POST['img'];
 $article['description'] = $_POST['description'];
 $article['price'] = $_POST['price'];
 $article['quantity'] = $_POST['quantity'];
-
+$articles[] = $article;
+delete_article($_POST['old_title']);
+$serialized_array = serialize($articles);
+file_put_contents('private/articles', $serialized_array);
 ?>
