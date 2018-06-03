@@ -34,7 +34,7 @@ function create_articles()
         de jeu idéale et performante.";
         $price = '59';
         $img = 'ressources/img/Corsair_Gaming_K55_RGB.jpg';
-        $category = '0Peripherals0Computers0';
+        $category = '0Peripherals0';
         $quantity = '8';
         $articles = array(array('title' => $title, 'description' => $description, 'price' => $price, 'img' => $img, 'category' => $category, 'quantity' => $quantity));
         $serialized_array = serialize($articles);
