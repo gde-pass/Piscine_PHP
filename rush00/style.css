@@ -138,7 +138,8 @@ img#header_logo
 
 .latestarticles
 {
-	margin-top: 1vh;
+	margin-top: 2vh;
+	margin-bottom: 1vh;
 	text-align:center;
 	width:100%;
 }
@@ -180,7 +181,7 @@ img#header_logo
 
 	max-width: 70%;
 	text-overflow: ellipsis;
-	max-height: 100px;
+	height: 70%;
 	overflow: hidden;
 }
 
@@ -191,18 +192,20 @@ img#header_logo
 
 .arttitle
 {
+	padding: 20px 0 20px 20px;
 	margin-right:15px;
+	width: 90%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #ffffff;
 }
 
 .arttitle > h2
 {
-	color: #ffffff;
 	font-size:1.2em;
-	margin: 20px 0 20px 20px;
 	white-space: nowrap;
-	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 100%;
 }
 
 .downinfos
@@ -211,6 +214,7 @@ img#header_logo
 	padding:0 20px 20px 20px;
 	display:flex;
 	justify-content: space-between;
+	height: 30%;
 }
 
 .artpic
@@ -233,14 +237,28 @@ img#header_logo
 
 .footer
 {
+	display:flex;
+	justify-content: space-around;
 	width:100%;
-	height:30vh;
+	height:20vh;
+	color: #ffffff;
+	font-size: 0.6em;
 	background-color: #232323;
 }
 
-.footer > a
+h3
 {
-	color: #ff5454s;
+	color: #ff5454;
+	font-size: 2em;
+}
+
+.col3, .col1, .col2
+{
+	display:flex;
+	flex-direction:column;
+	align-items: left;
+	width: 20vw;
+	height: 100%;
 }
 
 /* ========================================================== FORMS ============================================================= */
@@ -547,9 +565,14 @@ img#header_logo
 
 .name
 {
-	width:300px;
+	width:400px;
 	text-overflow: ellipsis;
 	text-align: left;
+}
+
+.price
+{
+	width: 150px;
 }
 
 .quantity
