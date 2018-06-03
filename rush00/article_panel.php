@@ -8,7 +8,7 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
 ?>
 <div class=pageback>
     <?php include'sidebar.php'?>
-    <div class=contentform>
+    <div class=backcontent>
         <form class="backdivbg" action="create_article.php" method="post">
             <p>
                 <h1>Create article</h1>

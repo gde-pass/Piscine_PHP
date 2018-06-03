@@ -19,8 +19,6 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
 </div>
 
 <div class=contentform>
-<<<<<<< HEAD
-=======
     <form class="formbg" action="modify_article.php" method="post">
     <p>
         <h1>Modify article</h1>
@@ -58,7 +56,6 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
 </div>
 
 <div class=contentform>
->>>>>>> b3ba4d3b7a19e0181430c47b59e8d381f9085da0
     <form class="formbg" action="delete_article.php" method="post">
     <p>
         <h1>Delete article</h1>

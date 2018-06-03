@@ -19,7 +19,7 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
         <?php
             if ($_SESSION['admin'] == 'yes')
             {
-                echo '<a href="admin_only.php">Manage website</a>';
+                echo '<a class=buttoninput href="admin_home.php">Manage website</a>';
             }
         ?>
         </div>

@@ -1,6 +1,8 @@
 <?php
 include 'header.php';
-include 'iseven.php'
+include 'iseven.php';
+if ($_SESSION['connexion_status'] == 'disconnected')
+	header("Location: connexion.php");
 ?>
 
 <div class=cartcontent>
