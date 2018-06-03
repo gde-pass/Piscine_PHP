@@ -16,12 +16,6 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected')
             <br>
             <input class=buttoninput type="submit" name="submit" value="OK" />
         </form>
-        <?php
-            if ($_SESSION['admin'] == 'yes')
-            {
-                echo '<a class=buttoninput href="admin_home.php">Manage website</a>';
-            }
-        ?>
         </div>
 
 <?php

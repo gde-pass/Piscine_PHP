@@ -44,6 +44,10 @@ $articles = unserialize($articles);
 			</li>
 
 			<?php
+				if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes')
+                	$adm = '<li> <a href="admin_home.php">Manage website</a></li>';
+				else
+					$adm = "";
 				if ($_SESSION['connexion_status'] == 'connected')
 				{
 					echo '<li class="nav" style="float:right;">
@@ -51,6 +55,7 @@ $articles = unserialize($articles);
 					<ul class="submenu">
 						<li> <a href="cart.php">My shopping cart</a></li>
 						<li> <a href="my_profile.php">My account</a></li>
+						'.$adm.'
 					</ul></li>';
 				}
 			?>
