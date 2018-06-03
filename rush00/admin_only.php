@@ -89,8 +89,12 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
 <div class=contentform>
     <form class="formbg" action="delete_article.php" method="post">
     <p>
-        <h1>Delete article (a faire)</h1>
+        <h1>Delete article</h1>
         <input class=forminput placeholder="Title" type="text" name="title" autofocus required />
+        <br>
+        <input class=forminput placeholder="Your login" type="text" name="admin_login" required />
+        <br>
+        <input class=forminput placeholder="Your password" type="password" name="password" required />
         <br>
         <input class=buttoninput type="submit" name="submit" value="OK" />
     </p>
