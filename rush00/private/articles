@@ -1,12 +1,4 @@
-a:2:{i:0;a:6:{s:5:"title";s:22:"Corsair Gaming K55 RGB";s:11:"description";s:272:"Pour aligner les victoires et construire votre réputation,
+a:1:{i:0;a:6:{s:5:"title";s:22:"Corsair Gaming K55 RGB";s:11:"description";s:272:"Pour aligner les victoires et construire votre réputation,
         le clavier Corsair Gaming K55 RGB est le partenaire rêvé. Avec ses touches
         silencieuses et ses 6 touches macros, vous avez à votre disposition une surface
-<<<<<<< HEAD
-        de jeu idéale et performante.";s:5:"price";s:2:"59";s:3:"img";s:41:"ressources/img/Corsair_Gaming_K55_RGB.jpg";s:8:"category";s:23:"0Peripherals0Computers0";s:8:"quantity";s:1:"8";}i:1;a:6:{s:5:"title";s:14:"Razer Basilisk";s:11:"description";s:250:"Optimisée pour les FPS (First Personnal Shooter), la souris Razer Basilisk vous permettra d'affuter votre skill. Embarquant un capteur optique 5G avec 16000 dpi, elle vous offre une précision féroce afin que vous ne ratiez plus jamais votre cible.";s:5:"price";s:5:"69.95";s:3:"img";s:65:"https://media.ldlc.com/ld/products/00/04/56/59/LD0004565902_2.jpg";s:8:"category";s:13:"0Peripherals0";s:8:"quantity";s:1:"7";}}
-=======
-<<<<<<< HEAD
-        de jeu idéale et performante.";s:5:"price";s:2:"59";s:3:"img";s:41:"ressources/img/Corsair_Gaming_K55_RGB.jpg";s:8:"category";s:23:"0Peripherals0Computers0";s:8:"quantity";i:0;}i:1;a:6:{s:5:"title";s:5:"Titre";s:11:"description";s:16:"trololololololol";s:5:"price";s:3:"142";s:3:"img";s:97:"https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg";s:8:"category";s:38:"0Peripherals0Computers0toto0Cartouche0";s:8:"quantity";s:2:"20";}i:2;a:6:{s:5:"title";s:3:"yes";s:11:"description";s:3:"yes";s:5:"price";s:2:"42";s:3:"img";s:80:"http://localhost:8080/demo/rush/rush00/ressources/img/Corsair_Gaming_K55_RGB.jpg";s:8:"category";s:13:"0Peripherals0";s:8:"quantity";i:0;}}
-=======
-        de jeu idéale et performante.";s:5:"price";s:2:"59";s:3:"img";s:41:"ressources/img/Corsair_Gaming_K55_RGB.jpg";s:8:"category";s:13:"0Peripherals0";s:8:"quantity";s:1:"8";}}
->>>>>>> 45cd98c7f982ceb293b8f716832ac3ede4f95303
->>>>>>> 53fa5f817aac6acdc006cf50e078c120734d22ef
+        de jeu idéale et performante.";s:5:"price";s:2:"59";s:3:"img";s:41:"ressources/img/Corsair_Gaming_K55_RGB.jpg";s:8:"category";s:23:"0Peripherals0Computers0";s:8:"quantity";s:1:"8";}}
