@@ -559,7 +559,7 @@ img#header_logo
 
 .quantity
 {
-	width:200px;
+	width:180px;
 	text-overflow: ellipsis;
 	text-align: left;
 }
@@ -591,4 +591,9 @@ img#header_logo
 .totalprice > a, h2
 {
 	display: inline;
+}
+
+.buttons
+{
+	display: flex;
 }

@@ -51,7 +51,6 @@ $articles = unserialize($articles);
 					<ul class="submenu">
 						<li> <a href="cart.php">My shopping cart</a></li>
 						<li> <a href="my_profile.php">My account</a></li>
-						<li> <a href="#">History of purchase</a></li>
 					</ul></li>';
 				}
 			?>

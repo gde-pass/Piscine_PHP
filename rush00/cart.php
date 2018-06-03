@@ -17,7 +17,16 @@ include 'iseven.php'
 					{
 						if (ftiseven($i))
 						{
-							echo('<div class=line>
+							foreach($articles as $eleme)
+							{
+								if ($eleme['title'] === $elem)
+								{
+									$price = $eleme['price'];
+								}
+							}
+							if ($value != 0)
+								$list[$elem] = $value;
+								echo('<div class=line>
 								<div class=name>
 									<a>'.$elem.'</a>
 								</div>
@@ -26,26 +35,38 @@ include 'iseven.php'
 									<a> Quantity : '.$value.'</a>
 								</div>
 								<div class=buttons>
-									<input class=cartbutton type="submit" name="submit" value="-"/>
-									<input class=cartbutton type="submit" name="submit" value="+"/>
+								<div class=but1>
+								<form class="frm" action="rem_cart.php" method="post">
+									<input class=cartbutton type="submit" action="remove" name="'.$elem.'" value="-" title="-"/>
+								</form>
+								</div>
+								<div class=but1>
+								<form class="frm" action="add_cart_two.php" method="post">
+									<input class=cartbutton type="submit" action="add" name="'.$elem.'" value="+" title="-"/>
+								</form>
+								</div>
 								</div>
 								<div  class=sapce></div>
 								<div class=price>
-									<a> Price : '.$articles[$name][$price].'</a>
+									<a> Price : '.$price.' €</a>
 								</div>
-							</div>');
+								</div>');
+							$totprice = $totprice + ($price * $value);
 						}
 						$i++;
 					}
 				}
+				$_SESSION['list'] = $list;
 			?>
 		</div>
 		<div class=bottom>
 			<div class=totalprice>
-				<a>Total price :  </a> <h2>$_price €</h2>
+				<a>Total price :  </a> <h2><?php echo $totprice; ?> €</h2>
 			</div>
 			<div class=orderbutton>
-				<input class=buttoninput type="submit" name="submit" value="Acheter"/>
+				<form class="frm" action="buy.php" method="post">
+					<input class=buttoninput type="submit" action="send" name="buy" name="submit" value="Acheter"/>
+				</form>
 			</div>
 			</div>
 		</div>
