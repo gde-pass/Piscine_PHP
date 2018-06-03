@@ -12,6 +12,8 @@ if ($_SESSION['connexion_status'] == 'disconnected')
 		</div>
 		<div class=lines>
 			<?php
+				$totprice = 0;
+				$list = array();
 				if(isset($_SESSION['cart']) && $_SESSION['cart'])
 				{
 					$i = 1;
