@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 <div class=content>
 	<div class=featctnt>
-		##featured content##
+		<img class=banner src="ressources/img/banner.png" />
 	</div>
 	<div class=latestarticles>
 		<h2>Latest Articles</h2>

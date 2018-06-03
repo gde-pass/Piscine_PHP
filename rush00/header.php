@@ -26,7 +26,7 @@ $articles = unserialize($articles);
 				<a href="#">Shop</a>
 				<ul class="submenu">
 					<?php
-					foreach ($categ as $elem) 
+					foreach ($categ as $elem)
 					{
 						echo("<li><a href='category.php?cat=".$elem."'>".$elem."</a><li>");
 					}
@@ -49,7 +49,7 @@ $articles = unserialize($articles);
 					echo '<li class="nav" style="float:right;">
 					<a href="my_profile.php">'.$_SESSION['login'].'</a>
 					<ul class="submenu">
-						<li> <a href="#">My shopping car</a></li>
+						<li> <a href="cart.php">My shopping cart</a></li>
 						<li> <a href="my_profile.php">My account</a></li>
 						<li> <a href="#">History of purchase</a></li>
 					</ul></li>';

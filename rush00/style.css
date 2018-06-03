@@ -127,11 +127,23 @@ img#header_logo
 {
 	width:100vw;
 	height:30vh;
-	background-color: blue;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.featctnt > img
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	min-width:100%;
+	max-width: 100%
 }
 
 .latestarticles
 {
+	margin-top: 1vh;
 	text-align:center;
 	width:100%;
 }
@@ -431,7 +443,6 @@ img#header_logo
 	transform: translateY(-50%);
 	min-height: 100%;
 	max-width: 100%
-
 }
 
 .qtt > h2
