@@ -275,6 +275,7 @@ img#header_logo
 {
 	display: inline-block;
 	width:300px;
+	border-radius: 4px;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -332,6 +333,7 @@ img#header_logo
 
 .buttoncart
 {
+	border-radius: 4px;
 	display: inline-block;
 	width:95%;
 	-webkit-box-sizing: content-box;
@@ -354,6 +356,7 @@ img#header_logo
 
 .buttoncartgrey
 {
+	border-radius: 4px;
 	display: inline-block;
 	width:95%;
 	-webkit-box-sizing: content-box;
@@ -428,7 +431,7 @@ img#header_logo
 	transform: translateY(-50%);
 	min-height: 100%;
 	max-width: 100%
-	
+
 }
 
 .qtt > h2
@@ -485,18 +488,32 @@ img#header_logo
 	background-color: #ffffff;
 }
 
-.cart
+.line
+{
+	display: flex;
+	justify-content: space-around;
+	margin : 0 20px 0 20px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #ff5454;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cartbutton
+{
+	display: inline-block;
+	width:50px;
+	height:25px;
+	border: 0;
+	border-radius: 4px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	cursor: pointer;
+	margin:3px;
+	padding: 5px 5px;
+	font: normal 16px/normal "Nunito";
+	color: rgba(255,255,255,0.9);
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	background: #ff5454;
+}
