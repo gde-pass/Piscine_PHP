@@ -1,9 +1,9 @@
 <?PHP
-// if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
-// {
-//    header('HTTP/1.0 401 Unauthorized');
-//    header('Location: index.php');
-// }
+if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
+{
+   header('HTTP/1.0 401 Unauthorized');
+   header('Location: index.php');
+}
 
 function img_checker($img)
 {
@@ -28,24 +28,6 @@ function find_checked_box()
     return ($box);
 }
 
-function delete_article($article)
-{
-    $i = 0;
-    $array = file_get_contents('private/articles');
-    $array = unserialize($array);
-    foreach ($array as $element)
-    {
-        if ($element['title'] === $article)
-        {
-            unset($array[$i]);
-            sort($array);
-            $array = serialize($array);
-            file_put_contents('private/articles', $array);
-        }
-        $i++;
-    }
-}
-
 $articles = file_get_contents('private/articles');
 $articles = unserialize($articles);
 $checked_box = find_checked_box();
@@ -61,13 +43,43 @@ foreach ($articles as $value)
     }
 }
 
-$article['title'] = $_POST['new_title'];
-$article['img'] = $_POST['img'];
-$article['description'] = $_POST['description'];
-$article['price'] = $_POST['price'];
-$article['quantity'] = $_POST['quantity'];
-$articles[] = $article;
-delete_article($_POST['old_title']);
-$serialized_array = serialize($articles);
-file_put_contents('private/articles', $serialized_array);
+foreach ($_POST as $key => $value)
+{
+    if ($key === "new_title" && strlen($value) > 0)
+        $article["title"] = $value;
+    else if ($key === "img" && strlen($value) > 0 && img_checker($value) == TRUE)
+        $article["img"] = $value;
+    else if ($key === "price" && strlen($value) > 0)
+        $article["price"] = $value;
+    else if ($key === "description" && strlen($value) > 0)
+        $article["description"] = $value;
+    else if ($key === "quantity" && strlen($value) > 0)
+        $article["quantity"] = $value;
+}
+
+$str = '';
+
+foreach ($checked_box as $key => $value)
+{
+    $str .= '0';
+    $str .= $value;
+}
+
+if (strlen($str) > 0 && count($checked_box) > 1)
+{
+    $str .= '0';
+    $article["category"] = $str;
+}
+
+foreach ($articles as $key => $value)
+{
+    if ($value['title'] == $_POST['old_title'])
+    {
+        $articles[$key] = $article;
+        break ;
+    }
+}
+
+$articles = serialize($articles);
+file_put_contents('private/articles', $articles);
 ?>
