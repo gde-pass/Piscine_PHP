@@ -1,4 +1,5 @@
 <?PHP
+session_start();
 if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
 {
    header('HTTP/1.0 401 Unauthorized');
@@ -32,7 +33,10 @@ $articles = file_get_contents('private/articles');
 $articles = unserialize($articles);
 $checked_box = find_checked_box();
 $checked_box = trim($checked_box);
-$checked_box = preg_split("/[\s]+/", $checked_box);
+if (strlen($checked_box) > 0)
+    $checked_box = preg_split("/[\s]+/", $checked_box);
+else
+    $checked_box = [];
 
 foreach ($articles as $value)
 {
@@ -65,7 +69,7 @@ foreach ($checked_box as $key => $value)
     $str .= $value;
 }
 
-if (strlen($str) > 0 && count($checked_box) > 1)
+if (strlen($str) > 0 && count($checked_box) > 0)
 {
     $str .= '0';
     $article["category"] = $str;
