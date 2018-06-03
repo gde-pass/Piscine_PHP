@@ -17,12 +17,14 @@ function check_admin()
 function delete_article($article)
 {
     $i = 0;
+    $j == 0;
     $array = file_get_contents('private/articles');
     $array = unserialize($array);
     foreach ($array as $element)
     {
         if ($element['title'] === $article)
         {
+            $j++;
             unset($array[$i]);
             sort($array);
             $array = serialize($array);
@@ -30,7 +32,10 @@ function delete_article($article)
         }
         $i++;
     }
-
+    if ($j == 0)
+        return FALSE;
+    else
+        return TRUE;
 }
 
 if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR $_SESSION['admin'] == 'no')
@@ -44,8 +49,10 @@ else
     {
         if (check_admin() == TRUE)
         {
-            delete_article($_POST['title']);
-            header('Location: del_article.php?action=create');
+            if (delete_article($_POST['title']) == TRUE)
+                header('Location: del_article.php?action=create');
+            else
+                header('Location: del_article.php?action=error2');
         }
         else
             header('Location: del_article.php?action=error');

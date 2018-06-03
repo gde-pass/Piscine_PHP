@@ -16,7 +16,9 @@ if ($_SESSION['login'] == '' OR $_SESSION['connexion_status'] != 'connected' OR 
                 if(isset($_GET["action"]) && $_GET["action"] === "create")
                     echo("<div class=msgsucces><a>Your article has been deleted ! Yupi !</a></div>");
                 else if(isset($_GET["action"]) && $_GET["action"] === "error")
-                    echo("<div class=msgerror><a>ERROR : Check title, Login and Password</a></div>");
+                    echo("<div class=msgerror><a>ERROR : Invalid Login or Password</a></div>");
+                else if(isset($_GET["action"]) && $_GET["action"] === "error2")
+                    echo("<div class=msgerror><a>ERROR : Invalid Title</a></div>");
                 ?>
                 <h1>Delete article</h1>
                 <input class=forminput placeholder="Title" type="text" name="title" autofocus required />
