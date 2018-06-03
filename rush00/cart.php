@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+include 'iseven.php'
 ?>
 
 <div class=cartcontent>
@@ -8,23 +9,36 @@ include 'header.php';
 			<h1>Shopping Cart</h1>
 		</div>
 		<div class=lines>
-			<div class=line>
-				<div class=name>
-					<a>$nomproduit</a>
-				</div>
-				<div  class=space1></div>
-				<div class=quantity>
-					<a> Quantity : $quantity</a>
-				</div>
-				<div class=buttons>
-					<input class=cartbutton type="submit" name="submit" value="-"/>
-					<input class=cartbutton type="submit" name="submit" value="+"/>
-				</div>
-				<div  class=sapce></div>
-				<div class=price>
-					<a> Price : $price</a>
-				</div>
-			</div>
+			<?php
+				if(isset($_SESSION['cart']) && $_SESSION['cart'])
+				{
+					$i = 1;
+					foreach($_SESSION['cart'] as $elem => $value)
+					{
+						if (ftiseven($i))
+						{
+							echo('<div class=line>
+								<div class=name>
+									<a>'.$elem.'</a>
+								</div>
+								<div  class=space1></div>
+								<div class=quantity>
+									<a> Quantity : '.$value.'</a>
+								</div>
+								<div class=buttons>
+									<input class=cartbutton type="submit" name="submit" value="-"/>
+									<input class=cartbutton type="submit" name="submit" value="+"/>
+								</div>
+								<div  class=sapce></div>
+								<div class=price>
+									<a> Price : '.$articles[$name][$price].'</a>
+								</div>
+							</div>');
+						}
+						$i++;
+					}
+				}
+			?>
 		</div>
 		<div class=bottom>
 			<div class=totalprice>

@@ -24,6 +24,7 @@ else
 	header('HTTP/1.0 404 File Not Found');
     header('Location: index.php');
 }
+$_SESSION['artname'] = $artname;
 ?>
 		<div class=artcontent>
 			<div class=articlebg>
@@ -46,7 +47,7 @@ else
 						if($quantity == 0)
 						echo('<input class=buttoncartgrey type="submit" name="" value="Out of stock" />');
 						else
-						echo('<input class=buttoncart type="submit" name="submit" value="ADD TO CART" />');
+						echo('<form class="formbg" action="add_cart.php" method="post"> <input class=buttoncart type="submit" name="$artname" value="ADD TO CART" /></form>');
 						?>
 					</div>
 				</div>

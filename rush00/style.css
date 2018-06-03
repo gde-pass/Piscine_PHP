@@ -550,6 +550,20 @@ img#header_logo
 	background: #ff5454;
 }
 
+.name
+{
+	width:300px;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+.quantity
+{
+	width:200px;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
 .space
 {
 	width=25vh;
