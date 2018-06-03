@@ -4,7 +4,6 @@ include 'iseven.php';
 if ($_SESSION['connexion_status'] == 'disconnected')
 	header("Location: connexion.php");
 ?>
-
 <div class=cartcontent>
 	<div class=cart>
 		<div class=title>
@@ -29,6 +28,7 @@ if ($_SESSION['connexion_status'] == 'disconnected')
 								}
 							}
 							if ($value != 0)
+							{
 								$list[$elem] = $value;
 								echo('<div class=line>
 								<div class=name>
@@ -55,6 +55,7 @@ if ($_SESSION['connexion_status'] == 'disconnected')
 									<a> Price : '.$price.' €</a>
 								</div>
 								</div>');
+							}
 							$totprice = $totprice + ($price * $value);
 						}
 						$i++;
