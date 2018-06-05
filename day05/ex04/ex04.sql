@@ -1,3 +1,3 @@
-UPDATE ft_table
-SET date_de_creation = DATE_ADD(date_de_creation, INTERVAL 20 YEAR)
-WHERE id > 5;
+UPDATE `ft_table`
+SET `creation_date` = CONCAT(YEAR(`creation_date`)+20, '-', MONTH(`creation_date`), '-', DAY(`creation_date`))
+WHERE `id` > 5;
