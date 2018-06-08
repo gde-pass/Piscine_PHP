@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ex00</title>
+    <style media="screen">
+    #balloon
+    {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+    <div id="balloon"></div>
+
+    <script>
+
+        var color = new Array('red', 'green', 'blue');
+        var i = 0;
+
+        balloon = document.getElementById('balloon');
+        balloon.onclick = onclick;
+
+        function onclick()
+        {
+            change_color();
+            change_size();
+        }
+
+        function change_color()
+        {
+            i++;
+            if (i > 2)
+                i = 0;
+            balloon.style.background = color[i];
+        }
+
+        function change_size()
+        {
+            var width = parseInt(balloon.clientWidth, 10);
+            var height = parseInt(balloon.clientHeight, 10);
+
+            width += 10;
+            height += 10;
+            if (width > 420)
+            {
+                width = 200;
+                height = 200;
+            }
+            balloon.style.width = width + 'px';
+            balloon.style.height = height + 'px';
+        }
+    </script>
+
+</body>
+</html>
