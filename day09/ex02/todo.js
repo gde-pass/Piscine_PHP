@@ -35,7 +35,7 @@ function setCookie(name, value, exdays)
 
 function todo()
 {
-    var persson = prompt("Entrez la chose a remettre au lendemain");
+    var persson = prompt("c koi la task ?");
     if (!strIsEmpty(persson))
     {
         var container = document.getElementById('ft_list');
@@ -60,7 +60,5 @@ function del(i)
         var task = document.getElementById('ft_list');
         task.removeChild(i);
         setCookie('todo', encodeURIComponent(task.innerHTML), 1);
-
-
     }
 }
